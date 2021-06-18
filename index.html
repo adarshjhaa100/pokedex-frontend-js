@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html tutorials</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <p>This is a sample program of hello world</p>
+
+    <!-- lists -->
+    <div>
+        <p>Unordered list</p>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+        <p>Ordered list</p>
+        <ol>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ol>
+    </div>
+    <!-- links -->
+    <a href="http://google.com">Google Homepage</a>
+
+    <!-- Forms -->
+    <form action="">
+        <label for="name">Name:</label>
+        <!-- Different input fields -->
+        <div>
+            <input type="text" name="name" id="name" placeholder="Enter Name" required>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" placeholder="0" required>
+            <br>
+        </div>
+        <!-- Button-->
+        <input type="button" value="Click Here">
+        <!-- Radio Button -->
+        <div>
+            <p>Select color</p>
+            <label for="redRadio">Red </label>
+            <input type="radio" name="color" value="Red" id="redRadio">
+            <label for="blueRadio">Blue </label>
+            <input type="radio" name="color" value="Blue" id="blueRadio">
+            <label for="greenRadio">Green</label>
+            <input type="radio" name="color" value="Green" id="greenRadio" checked>
+        </div>
+
+        <!-- Checkboxes: Allow multiple values to be selected -->
+        <div>
+            <p>Choose Subjects</p>
+            <label for="physics">Physics</label>
+            <input type="checkbox" name="subject" value="physics" id="physics">
+            <label for="chemistry">Chemistry</label>
+            <input type="checkbox" name="subject" value="chemistry" id="chemistry">
+            <label for="maths">Maths</label>
+            <input type="checkbox" name="subject" value="maths" id="maths">
+        </div>
+        <p>
+            Range:
+            <input type="range" name="marks" id="marks" min="0" max="100" value="40">
+        </p>
+
+        <!-- Select element:select menu -->
+        <p>Select your favourite color<br>
+            <select name="color" id="color-pick">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green" selected>Green</option>
+            </select>
+        </p>
+        <input type="submit" value="Submit Details">
+    </form>
+
+    <p>Tables table everywhere</p>
+    <!-- Table -->
+    <table>
+        <!-- Table header -->
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>column 2</th>
+                <th> column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>hello</td>
+                <td>hello</td>
+                <td>hello</td>
+            </tr>
+            <tr>
+                <td>hello</td>
+                <td>hello</td>
+                <td>hello</td>
+            </tr>
+            <tr>
+                <td>hello</td>
+                <td>hello</td>
+                <td>hello</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Multimedia -->
+    <p>Sample audio and video with builtin controls <br>
+        <audio src="./multimedia/file_example_MP3_700KB.mp3" controls></audio>
+        <br>
+        <video src="./multimedia/file_example_MP4_480_1_5MG.mp4" controls></video>
+    </p>
+
+    
+
+
+</body>
+
+</html>
