@@ -1,66 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple HTML portfolio</title>
-  </head>
-  <body>
-    <header><h1>Pokedex Data of Charizard 🔥</h1></header>
 
-    <!-- Personal Details -->
-    <div id="personal-details">
-      <!-- Profile Pic -->
-      <img
-        src="./multimedia/charizard.jpg"
-        alt="Charizard PNG"
-        height="200"
-        width="225"
-        class="profile"/>
-      <br/>
-      <!-- Basic Details -->
-      <h3>Basic Info</h3>
-      <table>
-        <tr>
-          <td>Name:</td>
-          <td>Charizard</td>
-        </tr>
-        <tr>
-          <td>Pokedex#:</td>
-          <td>006</td>
-        </tr>
-        <tr>
-          <td>Type</td>
-          <td>🔥&nbsp;🦇</td>
-        </tr>
-        <tr>
-          <td>Species:</td>
-          <td>Fire Lizard</td>
-        </tr>
-        <tr>
-          <td>Height:</td>
-          <td>1.7m</td>
-        </tr>
-        <tr>
-          <td>Weight:</td>
-          <td>90kg</td>
-        </tr>
-        <tr>
-          <td>Abilities:</td>
-          <td><ul><li>Fire Power</li><li>Flying</li></ul></td>
-        </tr>
-      </table>
-    </div>
-    <hr>
-    <div id="pokemon-stats">
-      <span>Stats</span>
-      <table>
-      <tr><td>Attack:</td> <td><input type="range" name="attack" id="attack" min="0" max="200" value="120"></td> <td>120<br></tr>
-      <tr><td>Defence:</td> <td><input type="range" name="defence" id="defence" min="0" max="200" value="100"></td><td>100</td><br></tr>
-      <tr><td>Speed:</td> <td><input type="range" name="speed" id="speed" min="0" max="200" value="150"></td><td>150</td><br></tr>
-      </table>
-    </div>
-    
-    <footer></footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokedex Data</title>
+</head>
+
+<body>
+  <header>
+    <h1>Pokedex Data of Charizard 🔥</h1>
+  </header>
+
+  <!-- Personal Details -->
+  <div id="personal-details">
+    <!-- Profile Pic -->
+    <img src="./multimedia/charizard.jpg" alt="Charizard PNG" height="200" width="225" class="profile" />
+    <br />
+    <!-- Basic Details -->
+    <h3>Basic Info</h3>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td>Charizard</td>
+      </tr>
+      <tr>
+        <td>Pokedex#:</td>
+        <td>006</td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>🔥&nbsp;🦇</td>
+      </tr>
+      <tr>
+        <td>Species:</td>
+        <td>Fire Lizard</td>
+      </tr>
+      <tr>
+        <td>Height:</td>
+        <td>1.7m</td>
+      </tr>
+      <tr>
+        <td>Weight:</td>
+        <td>90kg</td>
+      </tr>
+      <tr>
+        <td>Cry:</td>
+        <td><audio src="./multimedia/charizard.mp3" controls></audio></td>
+      </tr>
+      <tr>
+        <td>Abilities:</td>
+        <td>
+          <ul>
+            <li>Fire Power</li>
+            <li>Flying</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr />
+  <div id="pokemon-stats">
+    <span>Stats</span>
+    <table>
+      <tr>
+        <td>Attack:</td>
+        <td>
+          <input type="range" name="attack" id="attack" min="0" max="200" value="120" />
+        </td>
+        <td>120<br /></td>
+      </tr>
+
+      <tr>
+        <td>Defence:</td>
+        <td>
+          <input type="range" name="defence" id="defence" min="0" max="200" value="100" />
+        </td>
+        <td>100</td>
+        <br />
+      </tr>
+      <tr>
+        <td>Speed:</td>
+        <td>
+          <input type="range" name="speed" id="speed" min="0" max="200" value="150" />
+        </td>
+        <td>150</td>
+        <br />
+      </tr>
+    </table>
+  </div>
+</body>
+
 </html>
