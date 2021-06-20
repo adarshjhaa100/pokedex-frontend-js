@@ -98,6 +98,6 @@ let personNew={
 };
 
 // Note: When it's requried to call "this" inside a callback, make it a regular function
-
 personNew.getRegular();
 personNew.getArrow();
+
