@@ -101,3 +101,35 @@ let personNew={
 personNew.getRegular();
 personNew.getArrow();
 
+// JS arrays
+const a=[]; //create an empty array
+a.push(5); a.pop();  //adding and removing items
+const b=Array.from([1,2,3,4,5,6,7,8,9,10]); //Array from another iterable
+const c=Array(5).fill(10); // Create an array of size 5 with value of elements as 10
+
+const modb=b.map((val,index)=>val*index); // Apply operation on each element of the array
+const filterb=b.filter((val)=> val%2==0); // Filter array, the function returns predicate(true or false) for each element
+
+console.log(a,b,c);
+console.log(modb);
+console.log(filterb)
+
+// Using forEach array
+b.forEach((val)=>{
+  console.log(val);
+});
+
+//for..if array(ES6 loop)
+for(let i in b)
+  console.log(i);
+
+// Get first 3 items staring from index 4  
+console.log(b.slice(4,4+3));
+console.log(b.toString(), b.sort());
+
+// find element in an array
+let myVal=5;
+b.find((val)=>val==myVal);
+
+//copy by value
+const f=Array.from(b);
