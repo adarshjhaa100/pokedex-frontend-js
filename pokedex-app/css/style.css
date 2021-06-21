@@ -1,0 +1,20 @@
+.pokedex-list-item{
+    border: 3px solid rgb(39, 228, 39);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 8px;
+    font-size:larger;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.pokedex-no{
+    align-self: flex-start;
+    margin: 2px;
+}
+
+.pokedex-name{
+    align-self: flex-end;
+    margin-left: 50px;
+}
