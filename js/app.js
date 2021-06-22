@@ -1,23 +1,22 @@
 console.log("Hello to the world of pokemon");
 
 var base_url = "https://pokeapi.co/api/v2/";
+var pokemonList=[];
 
-// function to carry out experiments
-async function experiment() {
-  let url = base_url + "pokemon?limit=350";
-  // without awail, fetch() will return a promise
-  // with await, We will get response
-  let response = await fetch(url);
-  let resDetails = await response.json(); // get the json response
-  let pokeList = await resDetails.results; // Array of pokemons
-  let samplePokemon = await pokeList[0];
-  let pokeUrl = await samplePokemon["url"]; // get url of pokemon
+// function to add search funcionality
+let searchEle=document.getElementById("pokesearch");
+searchEle.addEventListener("input",()=>{
+    let text=searchEle.value;
+    if(pokemonList.length>0)
+        {    // filter those pokemon which matches
+            let pokeList=pokemonList.filter(
+                (val)=>val.name.includes(text));
+                console.log(pokeList);
+                createPokemonList(pokeList);
+        }
+        });
 
-  let pokeResponse = await fetch(pokeUrl); // fetch pokemon details
-  let pokeDetails = await pokeResponse.json();
 
-  console.log(pokeDetails);
-}
 
 //function to get pokemon list
 async function getPokemonList(n) {
@@ -117,7 +116,7 @@ async function displayPokemonDetails(pokeDetails) {
 
 // adding event listener
 async function clickItem(name, url) {
-  console.log(`Hello ${name}`);
+//   console.log(`Hello ${name}`);
   let res = await fetch(url);
   let pokeDetails = await res.json();
 
@@ -125,10 +124,9 @@ async function clickItem(name, url) {
 }
 
 // Add pokemons to the list
-async function createPokemonList(n) {
-  const pokeList = await getPokemonList(n);
-  // console.log(pokeList);
+async function createPokemonList(pokeList,append=false) {
   let listElement = document.getElementById("pokemon-list");
+  listElement.innerHTML="";
   pokeList.forEach((pokemon, id) => {
     // eleement for pokemon details
     let ele = document.createElement("div");
@@ -152,10 +150,18 @@ async function createPokemonList(n) {
       clickItem(pokemon.name, pokemon.url);
     });
 
+    if(append)
+        pokemonList.push({"name":pokemon.name,
+                        "url":pokemon.url});
+
     listElement.appendChild(ele);
     // console.log(element.name);
   });
 }
 
-// experiment();
-createPokemonList(1000);
+async function loadAllPokemon(n){
+    const pokeList = await getPokemonList(n);
+    createPokemonList(pokeList,true);
+}
+
+loadAllPokemon(1118);
