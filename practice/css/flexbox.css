@@ -1,0 +1,49 @@
+/* pre-Settings for the layout */
+*{
+    margin:0px;
+    padding: 0px;
+    /* New box sizing */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 25px;
+}
+
+
+/* Rules for CSS flexbox */
+.container{
+    width: 100%;
+    height: 100vh;
+    /* Defines a flex container: enables flex for all children */
+    display: flex;
+    /* Main axis of flex items */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+   
+    /* gap b/w items */
+    gap: 5px;
+   
+    /* this works on the main axis */
+    justify-content: center;
+
+    /* move all the contents within it vertically*/
+    /* flex-wrap should be wrap for this property 
+    else each item will take the whole height*/
+    /* flex items wrap into multiple lines */
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* .Item-1{background-color: red; width: 30%;}
+.Item-2{background-color: red; width:30%;}
+.Item-3{background-color: red; width:20%;}
+.Item-4{background-color: red; width:10%; } */
+
+/* Select elements containing Item- */
+[class^="Item-"]{
+    background-color: blueviolet;
+}

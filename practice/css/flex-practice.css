@@ -1,0 +1,46 @@
+*{
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all-content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header{
+    background-color: rgb(223, 157, 157);
+    height: 10%;
+}
+
+.footer{    
+    background-color: rgb(152, 152, 236);
+    height: 10%;
+}
+
+.main{
+    background-color: rgb(141, 245, 141);
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-article{
+    background-color: rgb(243, 214, 132);
+    width: 80%;
+}
+
+.aside{
+    background-color: rgb(255, 180, 249);
+    width: 20%;
+}
+
+.aside-1{background-color: aqua; height: 40%;}
+.aside-2{background-color: rgb(178, 247, 151); height: 60%;}

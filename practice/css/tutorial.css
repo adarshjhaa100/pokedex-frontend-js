@@ -1,0 +1,48 @@
+/* TO apply style on each body */
+body{
+    font-size: 16px;    
+    line-height: 1.3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Adding a background */
+    /* background-image: url("../multimedia/file_example_PNG_500kB.png"); */
+}
+
+/* Applying margin and padding and borders*/
+.article{
+    border: solid 2px black;
+    margin: 5px;
+    padding: 8px;
+    /* Text alignment */
+    text-align: justify;
+    
+    /* Box sizing: width and height include upto border */
+    box-sizing: border-box;
+
+    /* Using calc functions to perform simple calculation */
+    max-width: calc(80%-20px) ;
+}
+
+/* Display property */
+.inlin{
+    display: inline;
+}
+
+.blo{
+    display: block;
+}
+
+/* positioning */
+/* Here, we posn the element with classname "third" */
+.first, .second, .third{
+    padding: 10px;
+}
+.first{background-color: red;}
+.second{background-color: green;}
+.third{
+    /* Move the element upwards */
+    background-color: blue;
+    position: relative;
+    top: -10px;
+}
+
+

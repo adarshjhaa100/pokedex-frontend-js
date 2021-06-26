@@ -2,6 +2,28 @@ console.log("Hello to the world of pokemon");
 
 var base_url = "https://pokeapi.co/api/v2/";
 var pokemonList=[];
+var pokemonType={
+  "normal":"😀",
+  "fighting":"🤛 ",
+  "fire":"🔥",
+  "water":"💧",
+  "grass":"🍀",
+  "electric":"⚡",
+  "ice":"🧊",
+  "poison":"🍆",
+  "ground":"🌍",
+  "flying":"🕊️",
+  "psychic":"🔮",
+  "bug":"🐛",
+  "rock":"⛰️",
+  "ghost":"👻",
+  "dark":"🕶️",
+  "dragon":"🐲",
+  "steel":"⚔️",
+  "fairy":"🧚"
+};
+
+
 
 // function to add search funcionality
 let searchEle=document.getElementById("pokesearch");
@@ -11,13 +33,12 @@ searchEle.addEventListener("input",()=>{
         {    // filter those pokemon which matches
             let pokeList=pokemonList.filter(
                 (val)=>val.name.includes(text));
-                console.log(pokeList);
+                // console.log(pokeList);
                 createPokemonList(pokeList);
         }
         });
 
-
-
+        
 //function to get pokemon list
 async function getPokemonList(n) {
   const url = base_url + `pokemon?limit=${n}`;
@@ -29,8 +50,8 @@ async function getPokemonList(n) {
 }
 
 function getTypes(types) {
-  if (types.length > 1) return `${types[0]}&nbsp${types[1]}`;
-  return `${types[0]}`;
+  if (types.length > 1) return `${pokemonType[types[0]]}&nbsp${pokemonType[types[1]]}`;
+  return `${pokemonType[types[0]]}`;
 }
 
 function displayBasicDetails(pokeDetails) {
